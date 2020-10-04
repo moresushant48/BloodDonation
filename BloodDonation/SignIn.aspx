@@ -6,8 +6,8 @@
         
         <div class="myform">
     
-            <p class="h2 mb-4 text-center">Login</p>
-
+            <p class="h2 m-2 text-left text-danger">Login</p>
+            <hr />
             <div class="form-group m-2">
                     
                 <label for="txtEmail">Email Id</label>

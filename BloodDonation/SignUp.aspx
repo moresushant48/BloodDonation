@@ -5,8 +5,8 @@
         
         <div class="myform mx-auto" style="width:600px">
 
-            <p class="h2 mb-4 text-center">Register</p>
-
+            <p class="h2 m-2 text-left text-danger">Register</p>
+            <hr />
             <div class="d-flex">
             
                 <div class="form-group m-2">
