@@ -12,13 +12,10 @@ namespace BloodDonation
     public partial class _Default : Page
     {
         public static String conString = "Data Source=.;Initial Catalog=blood;Integrated Security=True";
-        private SqlConnection con;
-        private SqlCommand cmd;
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection(conString);
-            con.Open();
+            
         }
     }
 }
