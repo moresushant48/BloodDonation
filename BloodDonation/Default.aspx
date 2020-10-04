@@ -2,41 +2,52 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+    <!-- MAIN PAGE -->
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+        <div class="container-fluid d-flex" style="height:600px; background-color:#eaeaea">
+            
+            <div class="row m-auto">
+
+                <div class="col-6 text-center">
+                    <img src="images/homepage.gif" class="img-fluid"/>                
+                </div>
+            
+                <div class="col-6 text-center m-auto">
+                
+                    <h1>Save a <span class="text-success">Life</span>, Donate <span class="text-danger">Blood</span>.</h1>
+                    <p class="lead text-primary">Be a <b>Blood Donor</b>, Be a <b>Hero</b> - A <b>Real One</b>.</p>
+                    <button class="btn border border-primary text-primary">Learn More</button>
+                
+                </div>
+
+            </div>
+
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+
+    <!-- Second PAGE -->
+
+        <div class="text-center" style="
+            height:600px;
+            background-image: url('images/hands.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+            ">
+            <div class="overlay text-white d-flex">
+                <div class="m-auto">
+                    <h1>Wish to Donate Blood ?</h1>
+                    <h2 class="lead">Register as Voluntary Blood Donor.</h2>
+                    <br />
+                    <a href="/SignUp" class="btn border-white text-white">Register</a>
+                </div>
+            </div>
+                
+
         </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+
+    <footer class="d-flex text-center text-white bg-dark" style="height:80px">
+        <p class="m-auto">&copy; Rutuja Patil - All Rights Reserved <%: DateTime.Now.Year %> </p>
+    </footer>
+
+    
 
 </asp:Content>
