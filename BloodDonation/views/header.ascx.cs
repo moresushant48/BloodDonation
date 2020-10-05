@@ -19,6 +19,7 @@ namespace BloodDonation.views
                 liSignin.Visible = false;
                 liSignup.Visible = false;
                 liDashboard.Visible = false;
+                liAccount.Visible = true;
 
                 btnLogout.Visible = true;
                 // liMyAccount.Visible = true;
@@ -47,8 +48,9 @@ namespace BloodDonation.views
                 liSignup.Visible = true;
 
                 btnLogout.Visible = false;
+                liAccount.Visible = false;
                 //liMyAccount.Visible = false;
-                
+
                 liDashboard.Visible = false;
                 
                 //liUserEmail.Visible = false;
