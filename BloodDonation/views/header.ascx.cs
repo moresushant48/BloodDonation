@@ -18,19 +18,18 @@ namespace BloodDonation.views
                  */
                 liSignin.Visible = false;
                 liSignup.Visible = false;
-                // liAdminPanel.Visible = false;
+                liDashboard.Visible = false;
 
                 btnLogout.Visible = true;
                 // liMyAccount.Visible = true;
                 // 8liUserEmail.Visible = true;
-
-
+                
                 /*
                  Admin Navigation
                  */
-                if (Session["userID"].ToString() == 1.ToString())
+                if (Session["roleId"].ToString() == Roles.ADMIN)
                 {
-                    //liAdminPanel.Visible = true;
+                    liDashboard.Visible = true;
                 }
 
                 /*
@@ -50,7 +49,7 @@ namespace BloodDonation.views
                 btnLogout.Visible = false;
                 //liMyAccount.Visible = false;
                 
-                //liAdminPanel.Visible = false;
+                liDashboard.Visible = false;
                 
                 //liUserEmail.Visible = false;
             }
