@@ -17,6 +17,12 @@ namespace BloodDonation
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if(Session["loggedIn"] == null)
+            {
+                Response.Redirect("/");
+            }
+
             con = new SqlConnection(_Default.conString);
             con.Open();
 

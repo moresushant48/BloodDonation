@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BloodDonation.views;
 
 namespace BloodDonation
 {
@@ -11,7 +12,10 @@ namespace BloodDonation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["loggedIn"] == null || Session["roleId"].ToString() != Roles.ADMIN)
+            {
+                Response.Redirect("/");
+            }
         }
     }
 }
