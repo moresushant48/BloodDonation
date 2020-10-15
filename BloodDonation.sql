@@ -43,3 +43,21 @@ CREATE TABLE [dbo].[roles](
 ) ON [PRIMARY]
 GO
 
+USE [blood]
+GO
+
+/****** Object:  Table [dbo].[bloodbanks]    Script Date: 10/15/2020 8:31:06 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[bloodbanks](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[bank_name] [varchar](50) NOT NULL,
+	[bank_address] [varchar](100) NOT NULL,
+	[status] [text] NOT NULL,
+	[user_id] [int] NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO

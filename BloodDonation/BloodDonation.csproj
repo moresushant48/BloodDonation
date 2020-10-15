@@ -106,7 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="admin\BanksApproval.aspx" />
     <Content Include="admin\Users.aspx" />
+    <Content Include="BecomeBank.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Sidebar.css" />
     <Content Include="admin\Dashboard.aspx" />
@@ -166,6 +168,13 @@
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\BanksApproval.aspx.cs">
+      <DependentUpon>BanksApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\BanksApproval.aspx.designer.cs">
+      <DependentUpon>BanksApproval.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,6 +190,13 @@
     </Compile>
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BecomeBank.aspx.cs">
+      <DependentUpon>BecomeBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BecomeBank.aspx.designer.cs">
+      <DependentUpon>BecomeBank.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
