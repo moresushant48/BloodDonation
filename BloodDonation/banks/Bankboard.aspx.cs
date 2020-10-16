@@ -20,28 +20,5 @@ namespace BloodDonation
             }
             
         }
-
-        protected void DeleteCamp_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (btn.CommandName == "deleteCamp")
-            {
-                SqlConnection con = new SqlConnection(_Default.conString);
-                con.Open();
-
-                String query = "DELETE FROM camps WHERE id = '" + btn.CommandArgument.Trim().ToString() + "'";
-
-                SqlCommand cmd = new SqlCommand(query, con);
-
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    ListView1.DataBind();
-                }
-
-                cmd.Dispose();
-                con.Close();
-
-            }
-        }
     }
 }
