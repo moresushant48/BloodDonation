@@ -42,5 +42,11 @@ namespace BloodDonation.banks
 
             }
         }
+
+        public static string checkIsOld(object obj)
+        {
+            int res = DateTime.Parse(obj.ToString()).CompareTo(DateTime.Now);
+            return res > 0 ? "border-left border-success" : "border-left border-danger";
+        }
     }
 }
