@@ -18,6 +18,7 @@ namespace BloodDonation.views
                  */
                 liSignin.Visible = false;
                 liSignup.Visible = false;
+                liBankboard.Visible = false;
                 liDashboard.Visible = false;
                 liAccount.Visible = true;
 
@@ -25,6 +26,14 @@ namespace BloodDonation.views
                 // liMyAccount.Visible = true;
                 // 8liUserEmail.Visible = true;
                 
+                /*
+                 * Blood Bank Navigation
+                 */
+                if (Session["roleId"].ToString() == Roles.BANK)
+                {
+                    liBankboard.Visible = true;
+                }
+
                 /*
                  Admin Navigation
                  */
@@ -50,7 +59,7 @@ namespace BloodDonation.views
                 btnLogout.Visible = false;
                 liAccount.Visible = false;
                 //liMyAccount.Visible = false;
-
+                liBankboard.Visible = false;
                 liDashboard.Visible = false;
                 
                 //liUserEmail.Visible = false;

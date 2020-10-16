@@ -108,6 +108,8 @@
     <Content Include="Account.aspx" />
     <Content Include="admin\BanksApproval.aspx" />
     <Content Include="admin\Users.aspx" />
+    <Content Include="banks\AddDonationCamp.aspx" />
+    <Content Include="banks\Bankboard.aspx" />
     <Content Include="BecomeBank.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Sidebar.css" />
@@ -120,6 +122,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="banks\BloodBankSidebar.master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\hands.jpg" />
     <Content Include="images\homepage.gif" />
@@ -190,6 +193,27 @@
     </Compile>
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="banks\AddDonationCamp.aspx.cs">
+      <DependentUpon>AddDonationCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banks\AddDonationCamp.aspx.designer.cs">
+      <DependentUpon>AddDonationCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="banks\Bankboard.aspx.cs">
+      <DependentUpon>Bankboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banks\Bankboard.aspx.designer.cs">
+      <DependentUpon>Bankboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="banks\BloodBankSidebar.master.cs">
+      <DependentUpon>BloodBankSidebar.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banks\BloodBankSidebar.master.designer.cs">
+      <DependentUpon>BloodBankSidebar.master</DependentUpon>
     </Compile>
     <Compile Include="BecomeBank.aspx.cs">
       <DependentUpon>BecomeBank.aspx</DependentUpon>
