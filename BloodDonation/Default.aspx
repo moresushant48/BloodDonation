@@ -30,9 +30,73 @@
                     </div>
                 
                 </div>
+        </div>
 
+    <!-- Camps Page -->
+
+    <div class="container-fluid text-center p-4">
+        
+        <hr />
+        <br />
+
+        <p class="h1-responsive">Upcoming Blood Donation Camps</p>
+
+        <div>
+            <div class="d-lg-flex">
+
+                <asp:ListView ID="lvCamps" runat="server" DataSourceID="SqlDataSource1">
+                
+                    <ItemTemplate>
+                        <div class="col-lg-4">
+                            <div class="card my-3 text-center">
+                
+                                <div class="card-header d-flex text-center">
+                                    <div class="col-4 m-auto">
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <br />
+                                        <%# convertToIndianDate(Eval("camp_date")) %>
+                        
+                                    </div>
+                    
+                                    <div class="col-4 m-auto">
+                                        <i class="fa fa-clock"></i>
+                                        <br />
+                                        <%#Eval("camp_time") %>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <br />
+                                    <%#Eval("camp_address") %>
+                                    
+                                </div>
+
+                                
+                                    <asp:Button ID="btnAttend" runat="server" Text="Attend" CssClass="btn btn-cyan btn-block" Width="100%"  />
+                                
+                            </div>
+                        </div>
+                    </ItemTemplate>
+
+                    <EmptyDataTemplate>
+                        <h1 class="alert-warning">No upcoming blood donation camps found.</h1>
+                    </EmptyDataTemplate>
+
+                </asp:ListView>
+            </div>
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
+                <SelectParameters>
+                    <asp:Parameter Name="todays_date" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
 
         </div>
+        <br />
+    </div>
+
 
     <!-- Second PAGE -->
 

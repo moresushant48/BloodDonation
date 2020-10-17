@@ -15,7 +15,12 @@ namespace BloodDonation
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            SqlDataSource1.SelectParameters["todays_date"].DefaultValue = DateTime.Today.ToShortDateString();
+        }
+
+        public String convertToIndianDate(object obj) {
+
+            return DateTime.Parse(obj.ToString()).ToString("dd/MM/yyyy");
         }
     }
 }

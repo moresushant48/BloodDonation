@@ -37,7 +37,7 @@ namespace BloodDonation.banks
         {
             SqlConnection con = new SqlConnection(_Default.conString);
             con.Open();
-
+            
             String query = "INSERT INTO camps VALUES('" + Calendar1.SelectedDate.Date.ToShortDateString() + "'," +
                 "'"+ txtAddress.Text.Trim() +"'," +
                 "'"+ hour.SelectedValue + " " + meridiem.SelectedValue +"'," +
