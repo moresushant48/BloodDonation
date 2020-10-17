@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BloodDonation._Default" %>
 
+<%@ Register Src="~/views/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <!-- MAIN PAGE -->
@@ -60,14 +63,8 @@
 
                 </div>
             </div>
-                
-
         </div>
-
-    <footer class="d-flex text-center text-white bg-dark" style="height:80px">
-        <p class="m-auto">&copy; Rutuja Patil - All Rights Reserved <%: DateTime.Now.Year %> </p>
-    </footer>
-
     
+    <uc1:footer runat="server" id="footer" />
 
 </asp:Content>
