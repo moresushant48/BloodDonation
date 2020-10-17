@@ -32,8 +32,6 @@ namespace BloodDonation.views
 
                 if (reader.Read())
                 {
-                    Timer1.Enabled = true;
-
                     Session["loggedIn"] = true;
                     Session["userId"] = reader.GetInt32(0);
                     Session["userEmail"] = reader.GetString(4);
@@ -62,7 +60,7 @@ namespace BloodDonation.views
                             sqlcon.Close();
                         }
                     }
-
+                    Timer1.Enabled = true;
                 }
                 else
                 {
@@ -75,8 +73,6 @@ namespace BloodDonation.views
                 con.Close();
 
             }
-
-            
 
         }
 

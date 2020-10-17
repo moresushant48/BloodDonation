@@ -22,8 +22,6 @@ namespace BloodDonation.banks
             {
                 Calendar1.SelectedDate = DateTime.Now.Date;
             }
-
-            fails.Text = Session["bankId"].ToString();
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
@@ -45,8 +43,6 @@ namespace BloodDonation.banks
                 "'"+ hour.SelectedValue + " " + meridiem.SelectedValue +"'," +
                 Session["bankId"].ToString() + "," +
                 0 +")";
-
-            fails.Text = query;
 
             SqlCommand cmd = new SqlCommand(query, con);
 
