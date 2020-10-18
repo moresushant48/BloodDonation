@@ -40,8 +40,6 @@
             </div>
 
         </div>
-       
-        <asp:Timer ID="Timer1" runat="server" Enabled="false" Interval="100" OnTick="Timer1_Tick"></asp:Timer>
 
     </main>
 

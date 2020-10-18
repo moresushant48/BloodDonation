@@ -60,7 +60,7 @@ namespace BloodDonation.views
                             sqlcon.Close();
                         }
                     }
-                    Timer1.Enabled = true;
+                    redirectAfterLogin();
                 }
                 else
                 {
@@ -81,9 +81,5 @@ namespace BloodDonation.views
             Response.Redirect("/Default");
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            redirectAfterLogin();
-        }
     }
 }
