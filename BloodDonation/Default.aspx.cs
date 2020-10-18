@@ -22,5 +22,44 @@ namespace BloodDonation
 
             return DateTime.Parse(obj.ToString()).ToString("dd/MM/yyyy");
         }
+
+        protected void btnAttend_Click(object sender, EventArgs e)
+        {
+            if(Session["loggedIn"] != null)
+            {
+                Button btn = (Button)sender;
+                if (btn.CommandName == "attend")
+                {
+                    SqlConnection con = new SqlConnection(_Default.conString);
+                    con.Open();
+
+                    String getVisitorCount = "SELECT visitors FROM camps WHERE id = '" + btn.CommandArgument.Trim().ToString() + "'";
+
+                    SqlCommand cmd = new SqlCommand(getVisitorCount, con);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        SqlConnection sqlcon = new SqlConnection(_Default.conString);
+                        sqlcon.Open();
+
+                        String query = "UPDATE camps SET visitors = " + (reader.GetInt32(0) + 1)
+                            + " WHERE id = '" + btn.CommandArgument.Trim().ToString() + "'";
+
+                        SqlCommand updateCmd = new SqlCommand(query, sqlcon);
+
+                        updateCmd.ExecuteNonQuery();
+                       
+                        updateCmd.Dispose();
+                        sqlcon.Close();
+                    }
+
+                    cmd.Dispose();
+                    con.Close();
+
+                }
+            }
+        }
     }
 }

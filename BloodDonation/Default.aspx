@@ -34,69 +34,72 @@
 
     <!-- Camps Page -->
 
-    <div class="container-fluid text-center p-4">
+    <asp:UpdatePanel runat="server" ID="up1" style="width:100%">
+        <ContentTemplate>
+        <div class="container-fluid text-center p-4">
         
-        <hr />
-        <br />
+            <hr />
+            <br />
 
-        <p class="h1-responsive">Upcoming Blood Donation Camps</p>
+            <p class="h1-responsive">Upcoming Blood Donation Camps</p>
 
-        <div>
-            <div class="d-lg-flex">
+            <div>
+                <div class="d-lg-flex">
 
-                <asp:ListView ID="lvCamps" runat="server" DataSourceID="SqlDataSource1">
+                    <asp:ListView ID="lvCamps" runat="server" DataSourceID="SqlDataSource1">
                 
-                    <ItemTemplate>
-                        <div class="col-lg-4">
-                            <div class="card my-3 text-center">
+                        <ItemTemplate>
+                            <div class="col-lg-4">
+                                <div class="card my-3 text-center">
                 
-                                <div class="card-header d-flex text-center">
-                                    <div class="col-4 m-auto">
-                                        <i class="fa fa-calendar-alt"></i>
-                                        <br />
-                                        <%# convertToIndianDate(Eval("camp_date")) %>
+                                    <div class="card-header d-flex text-center">
+                                        <div class="col-4 m-auto">
+                                            <i class="fa fa-calendar-alt text-success"></i>
+                                            <br />
+                                            <%# convertToIndianDate(Eval("camp_date")) %>
                         
-                                    </div>
+                                        </div>
                     
-                                    <div class="col-4 m-auto">
-                                        <i class="fa fa-clock"></i>
-                                        <br />
-                                        <%#Eval("camp_time") %>
+                                        <div class="col-4 m-auto">
+                                            <i class="fa fa-clock text-primary"></i>
+                                            <br />
+                                            <%#Eval("camp_time") %>
+                                        </div>
+
                                     </div>
 
-                                </div>
+                                    <div class="card-body">
+                                        <i class="fa fa-map-marker-alt text-danger"></i>
+                                        <br />
+                                        <%#Eval("camp_address") %>
+                                    </div>
 
-                                <div class="card-body">
-                                    <i class="fa fa-map-marker-alt"></i>
-                                    <br />
-                                    <%#Eval("camp_address") %>
-                                    
+                                    <% if (Session["loggedIn"] != null)
+                                        { %>
+                                    <asp:Button ID="btnAttend" runat="server" CommandArgument='<%#Eval("id")%>' CommandName="attend" Text="Attend" CssClass="btn btn-cyan btn-block" OnClick="btnAttend_Click" Width="100%"  />
+                                    <% } %>
                                 </div>
-
-                                
-                                    <asp:Button ID="btnAttend" runat="server" Text="Attend" CssClass="btn btn-cyan btn-block" Width="100%"  />
-                                
                             </div>
-                        </div>
-                    </ItemTemplate>
+                        </ItemTemplate>
 
-                    <EmptyDataTemplate>
-                        <h1 class="alert-warning">No upcoming blood donation camps found.</h1>
-                    </EmptyDataTemplate>
+                        <EmptyDataTemplate>
+                            <h1 class="alert-warning">No upcoming blood donation camps found.</h1>
+                        </EmptyDataTemplate>
 
-                </asp:ListView>
+                    </asp:ListView>
+                </div>
+
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
+                    <SelectParameters>
+                        <asp:Parameter Name="todays_date" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+
             </div>
-
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
-                <SelectParameters>
-                    <asp:Parameter Name="todays_date" Type="String" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-
+            <br />
         </div>
-        <br />
-    </div>
-
+        </ContentTemplate>
+    </asp:UpdatePanel>
 
     <!-- Second PAGE -->
 
