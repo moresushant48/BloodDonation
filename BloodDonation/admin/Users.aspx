@@ -47,7 +47,7 @@
                                     <td><%#Eval("address") %></td>
                                     <td><%#Eval("role_name") %></td>
                                     <td>
-                                        <asp:Button runat="server" ID="DeleteUser" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteUser" OnClick="DeleteUser_Click" CssClass="btn btn-red btn-block p-1" />
+                                        <asp:Button runat="server" ID="DeleteUser" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteUser" OnClick="DeleteUser_Click" OnClientClick="javascript:return confirm('Are you sure to delete record?')" CssClass="btn btn-red btn-block p-1" />
                                     </td>
                                 </tr>
                             </tbody>
@@ -99,7 +99,7 @@
                                     <td><%#Eval("address") %></td>
                                     <td><%#Eval("role_name") %></td>
                                     <td>
-                                        <asp:Button runat="server" ID="DeleteUser" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteUser" OnClick="DeleteUser_Click" CssClass="btn btn-red btn-block p-1" />
+                                        <asp:Button runat="server" ID="DeleteUser" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteUser" OnClick="DeleteUser_Click" OnClientClick="javascript:return confirm('Are you sure to delete record?')" CssClass="btn btn-red btn-block p-1" />
                                     </td>
                                 </tr>
                             </tbody>

@@ -24,8 +24,6 @@ namespace BloodDonation.admin
 
             if (!IsPostBack)
             {
-                
-                
 
             }
         }
