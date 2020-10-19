@@ -34,6 +34,7 @@ namespace BloodDonation
                 reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    lblName.Text = reader.GetString(1);
                     txtFirstName.Text = reader.GetString(1);
                     txtMiddleName.Text = reader.GetString(2);
                     txtLastName.Text = reader.GetString(3);

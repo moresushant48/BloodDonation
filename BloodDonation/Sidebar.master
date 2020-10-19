@@ -8,6 +8,7 @@
                 <a href="/admin/Dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
                 <a href="/admin/Users" class="list-group-item list-group-item-action bg-light">Users</a>
                 <a href="/admin/BanksApproval" class="list-group-item list-group-item-action bg-light">Banks</a>
+                <a href="/admin/ViewAllCamps" class="list-group-item list-group-item-action bg-light">Camps</a>
             </div>
         </div>
         

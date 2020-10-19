@@ -6,7 +6,7 @@
        <div style="height:300px" class="w-100 aqua-gradient py-3">
 
            <div class="container text-white">
-               <h1 class="display-3">Hello, <asp:Label ID="lblName" runat="server">Sushant</asp:Label></h1>
+               <h1 class="display-3">Hello, <asp:Label ID="lblName" runat="server"></asp:Label></h1>
                <p class="lead">This is your profile page. You can see your details and contributions.</p>
            </div>
 

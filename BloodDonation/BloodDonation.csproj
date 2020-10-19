@@ -108,6 +108,7 @@
     <Content Include="Account.aspx" />
     <Content Include="admin\BanksApproval.aspx" />
     <Content Include="admin\Users.aspx" />
+    <Content Include="admin\ViewAllCamps.aspx" />
     <Content Include="banks\AddDonationCamp.aspx" />
     <Content Include="banks\Bankboard.aspx" />
     <Content Include="banks\ViewMyCamps.aspx" />
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="admin\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ViewAllCamps.aspx.cs">
+      <DependentUpon>ViewAllCamps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ViewAllCamps.aspx.designer.cs">
+      <DependentUpon>ViewAllCamps.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
