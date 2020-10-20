@@ -83,7 +83,9 @@
                         </ItemTemplate>
 
                         <EmptyDataTemplate>
-                            <h1 class="alert-warning">No upcoming blood donation camps found.</h1>
+                            
+                                <p class="m-auto h3-responsive p-4 alert-danger">No upcoming blood donation camps found.<br />You can always come back.</p>
+                            
                         </EmptyDataTemplate>
 
                     </asp:ListView>

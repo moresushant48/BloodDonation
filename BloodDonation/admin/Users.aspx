@@ -10,7 +10,7 @@
 
         <li class="nav-item">
             <a class="nav-link" id="banks-tab" data-toggle="tab" href="#banks" role="tab" aria-controls="banks"
-                aria-selected="false">Bank Profiles</a>
+                aria-selected="false">Bankers</a>
         </li>
 
     </ul>
@@ -58,7 +58,7 @@
     
                     </table>
 
-                    <asp:DataPager ID="DataPager1" PagedControlID="ListView1" PageSize="4" runat="server">
+                    <asp:DataPager ID="DataPager1" PagedControlID="ListView1" PageSize="5" runat="server">
                     <Fields>
                         <asp:NextPreviousPagerField ButtonCssClass="btn btn-cyan"/>
                     </Fields>
@@ -110,7 +110,7 @@
     
                     </table>
 
-                    <asp:DataPager ID="DataPager2" PagedControlID="ListView2" PageSize="4" runat="server">
+                    <asp:DataPager ID="DataPager2" PagedControlID="ListView2" PageSize="5" runat="server">
                     <Fields>
                         <asp:NextPreviousPagerField ButtonCssClass="btn btn-cyan"/>
                     </Fields>
