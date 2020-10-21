@@ -112,6 +112,7 @@
     <Content Include="admin\ViewAllCamps.aspx" />
     <Content Include="banks\AddDonationCamp.aspx" />
     <Content Include="banks\Bankboard.aspx" />
+    <Content Include="banks\ViewCampDetails.aspx" />
     <Content Include="banks\ViewMyCamps.aspx" />
     <Content Include="BecomeBank.aspx" />
     <Content Include="Content\Site.css" />
@@ -225,6 +226,13 @@
     </Compile>
     <Compile Include="banks\BloodBankSidebar.master.designer.cs">
       <DependentUpon>BloodBankSidebar.master</DependentUpon>
+    </Compile>
+    <Compile Include="banks\ViewCampDetails.aspx.cs">
+      <DependentUpon>ViewCampDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banks\ViewCampDetails.aspx.designer.cs">
+      <DependentUpon>ViewCampDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="banks\ViewMyCamps.aspx.cs">
       <DependentUpon>ViewMyCamps.aspx</DependentUpon>

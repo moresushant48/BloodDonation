@@ -48,5 +48,14 @@ namespace BloodDonation.banks
             int res = DateTime.Parse(obj.ToString()).CompareTo(DateTime.Now);
             return res > 0 ? "border-left border-success" : "border-left border-danger";
         }
+
+        protected void AddCampDetails_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btn.CommandName == "addCampDetails")
+            {
+                Response.Redirect("ViewCampDetails?campId=" +  btn.CommandArgument.Trim().ToString());
+            }
+        }
     }
 }

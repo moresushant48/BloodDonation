@@ -13,10 +13,14 @@
             <div class="card my-3 <%# checkIsOld(Eval("camp_date")) %>">
                 
                 <div class="card-body d-flex">
-                    <div class="col-11">
+                    <div class="col-10">
                         <%#Eval("camp_address") %>
                     </div>
                     
+                    <div class="col-1">
+                        <asp:Button runat="server" ID="AddCampDetails" Text="Details" CommandArgument='<%#Eval("id")%>' CommandName="addCampDetails" OnClick="AddCampDetails_Click" CssClass="btn btn-green btn-block p-1" />
+                    </div>  
+
                     <div class="col-1">
                         <asp:Button runat="server" ID="DeleteCamp" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteCamp" OnClick="DeleteCamp_Click" OnClientClick="javascript:return confirm('Are you sure to delete record?')" CssClass="btn btn-red btn-block p-1" />
                     </div>    
