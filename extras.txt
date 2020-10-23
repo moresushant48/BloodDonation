@@ -1,0 +1,28 @@
+Admin :
+Login / Logout
+View Account
+Modify Account Details
+View Statistics on Dashboard
+View / Delete Donors
+View / Delete Blood Banker's Profiles
+View Blood Banks
+Approve / Deny Blood Bankers
+View / Delete Camps
+
+Blood Banker :
+Register
+Login / Logout
+View Account
+Modify Account Details
+View Camp Statistics
+Add/Arrange camps
+View / Delete Camps
+Add Donors to Camp
+View / Delete Donors of Camp
+Donor : 
+Register
+Login / Logout
+View Account
+Modify Account Details
+View Upcoming Camps
+Attend Camps
