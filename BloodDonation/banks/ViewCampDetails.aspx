@@ -144,20 +144,34 @@
             
                         </div>
 
-                        <div class="form-group m-2">
+                        <div class="d-flex">
 
-                            <label for="txtBloodGroup">Blood Group</label>
-                            <asp:DropDownList ID="txtBloodGroup" runat="server" CssClass="form-control">
-                                <asp:ListItem>O+</asp:ListItem>
-                                <asp:ListItem>O-</asp:ListItem>
-                                <asp:ListItem>A+</asp:ListItem>
-                                <asp:ListItem>A-</asp:ListItem>
-                                <asp:ListItem>B+</asp:ListItem>
-                                <asp:ListItem>B-</asp:ListItem>
-                                <asp:ListItem>AB+</asp:ListItem>
-                                <asp:ListItem>AB-</asp:ListItem>
-                            </asp:DropDownList>
+                            <div class="form-group col-6">
+
+                                <label for="txtBloodGroup">Blood Group</label>
+                                <asp:DropDownList ID="txtBloodGroup" runat="server" CssClass="form-control">
+                                    <asp:ListItem>O+</asp:ListItem>
+                                    <asp:ListItem>O-</asp:ListItem>
+                                    <asp:ListItem>A+</asp:ListItem>
+                                    <asp:ListItem>A-</asp:ListItem>
+                                    <asp:ListItem>B+</asp:ListItem>
+                                    <asp:ListItem>B-</asp:ListItem>
+                                    <asp:ListItem>AB+</asp:ListItem>
+                                    <asp:ListItem>AB-</asp:ListItem>
+                                </asp:DropDownList>
                 
+                            </div>
+
+                            <div class="form-group col-6">
+                    
+                                <label for="txtBloodQuantity">Quantity</label>
+                                <asp:DropDownList ID="txtBloodQuantity" runat="server" CssClass="form-control">
+                                    <asp:ListItem Value="350">350 ml</asp:ListItem>
+                                    <asp:ListItem Value="450">450 ml</asp:ListItem>
+                                </asp:DropDownList>
+                
+                            </div>
+
                         </div>
 
                         <div class="form-group m-2">
@@ -198,6 +212,7 @@
                         <th>Gender</th>
                         <th>Mobile</th>
                         <th>Blood</th>
+                        <th>Quantity</th>
                         <th>Address</th>
                         <th>Actions</th>
                     </tr>
@@ -215,6 +230,7 @@
                                 <td><%#Eval("gender") %></td>
                                 <td><%#Eval("phone") %></td>
                                 <td><%#Eval("blood") %></td>
+                                <td><%#Eval("quantity") %> ml</td>
                                 <td><%#Eval("address") %></td>
                                 <td>
                                     <asp:Button runat="server" ID="DeleteDonor" Text="Delete" CommandArgument='<%#Eval("id")%>' CommandName="deleteDonor" OnClick="DeleteDonor_Click" OnClientClick="javascript:return confirm('Are you sure to delete record?')" CssClass="btn btn-red btn-block p-1" />

@@ -5,6 +5,10 @@ body {
     background-color:white;
 }
 
+body:not(.modal-open) {
+    padding-right: 0px !important;
+}
+
 .myform {
     width: 400px;
     margin-left: auto;

@@ -184,6 +184,15 @@ namespace BloodDonation.banks {
         protected global::System.Web.UI.WebControls.DropDownList txtBloodGroup;
         
         /// <summary>
+        /// txtBloodQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList txtBloodQuantity;
+        
+        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
