@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="BloodDonation.views.SignUp" %>
+﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="BloodDonation.views.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <main class="vh-100">
@@ -75,23 +75,47 @@
             
             </div>
 
-            <div class="form-group m-2">
+            <div class="d-flex">
 
-                <label for="txtBloodGroup">Blood Group</label>
-                <asp:DropDownList ID="txtBloodGroup" runat="server" CssClass="form-control">
-                    <asp:ListItem>O+</asp:ListItem>
-                    <asp:ListItem>O-</asp:ListItem>
-                    <asp:ListItem>A+</asp:ListItem>
-                    <asp:ListItem>A-</asp:ListItem>
-                    <asp:ListItem>B+</asp:ListItem>
-                    <asp:ListItem>B-</asp:ListItem>
-                    <asp:ListItem>AB+</asp:ListItem>
-                    <asp:ListItem>AB-</asp:ListItem>
-                </asp:DropDownList>
+                <div class="col">
+
+                    <label for="txtBloodGroup">Blood Group</label>
+                    <asp:DropDownList ID="txtBloodGroup" runat="server" CssClass="form-control">
+                        <asp:ListItem>O+</asp:ListItem>
+                        <asp:ListItem>O-</asp:ListItem>
+                        <asp:ListItem>A+</asp:ListItem>
+                        <asp:ListItem>A-</asp:ListItem>
+                        <asp:ListItem>B+</asp:ListItem>
+                        <asp:ListItem>B-</asp:ListItem>
+                        <asp:ListItem>AB+</asp:ListItem>
+                        <asp:ListItem>AB-</asp:ListItem>
+                    </asp:DropDownList>
       
+                </div>
+
+                <div class="col">
+                    
+                    <label for="txtGender">Gender</label>
+                    <asp:DropDownList ID="txtGender" runat="server" CssClass="form-control">
+                        <asp:ListItem>M</asp:ListItem>
+                        <asp:ListItem>F</asp:ListItem>
+                    </asp:DropDownList>
+                
+                </div>
+
+                <div class="col">
+
+                    <label for="txtAge">Age</label>
+                    <asp:TextBox ID="txtAge" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                
+                    <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtAge" ErrorMessage="Please Enter Age."></asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" ForeColor="Red" MinimumValue="18" MaximumValue="65" runat="server" ControlToValidate="txtAge" ErrorMessage="Person needs to be between 18 to 65."></asp:RangeValidator>
+                
+                </div>
+
             </div>
 
-            <div class="form-group m-2">
+            <div class="form-group mx-2">
                 
                 <label for="txtAddress">Residential Address</label>
                 <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control mb-4" ></asp:TextBox>
