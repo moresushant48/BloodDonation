@@ -250,7 +250,7 @@
 
                 <asp:DataPager ID="DataPager1" PagedControlID="ListView1" PageSize="5" runat="server">
                 <Fields>
-                    <asp:NextPreviousPagerField ButtonCssClass="btn btn-cyan"/>
+                    <asp:NumericPagerField CurrentPageLabelCssClass="border border-primary p-2 mx-2"/>
                 </Fields>
             </asp:DataPager>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [visitdetails] WHERE camp_id = @campId ORDER BY [id] DESC">

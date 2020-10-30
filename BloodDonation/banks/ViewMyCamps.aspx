@@ -52,7 +52,7 @@
 
     <asp:DataPager ID="DataPager1" PagedControlID="ListView1" PageSize="4" runat="server">
         <Fields>
-            <asp:NextPreviousPagerField ButtonCssClass="btn btn-cyan"/>
+            <asp:NumericPagerField CurrentPageLabelCssClass="border border-primary p-2 mx-2"/>
         </Fields>
     </asp:DataPager>
     

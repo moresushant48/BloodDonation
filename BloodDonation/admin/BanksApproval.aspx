@@ -43,7 +43,7 @@
 
                     <asp:DataPager ID="DataPager1" PagedControlID="ListView1" PageSize="4" runat="server">
                     <Fields>
-                        <asp:NextPreviousPagerField ButtonCssClass="btn btn-cyan"/>
+                        <asp:NumericPagerField CurrentPageLabelCssClass="border border-primary p-2 mx-2"/>
                     </Fields>
                 </asp:DataPager>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT b.id, [bank_name], [bank_address], u.email, u.mobno, [status], b.user_id FROM bloodbanks b INNER JOIN users u ON (u.id=b.user_id)"></asp:SqlDataSource>
