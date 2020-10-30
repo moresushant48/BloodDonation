@@ -56,7 +56,9 @@ namespace BloodDonation.views
                 txtBloodGroup.Text + "','" +
                 txtAddress.Text.Trim() + "','" +
                 txtPassword.Text.Trim() + "'," +
-                USER_ROLE_ID + ")";
+                USER_ROLE_ID + ",'" +
+                txtGender.SelectedValue + "'," +
+                txtAge.Text.Trim() + ")";
 
                 cmd = new SqlCommand(query, con);
 
