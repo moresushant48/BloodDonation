@@ -40,7 +40,7 @@ namespace BloodDonation.banks
             
             String query = "INSERT INTO camps VALUES('" + Calendar1.SelectedDate.Date.ToShortDateString() + "'," +
                 "'"+ txtAddress.Text.Trim() +"'," +
-                "'"+ hour.SelectedValue + " " + meridiem.SelectedValue +"'," +
+                "'"+ hour.SelectedValue + " " + meridiem.SelectedValue + " To " + hourTo.SelectedValue + " " + meridiemTo.SelectedValue +"'," +
                 Session["bankId"].ToString() + "," +
                 0 +")";
 

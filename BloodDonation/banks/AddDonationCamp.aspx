@@ -9,57 +9,84 @@
             <hr />
 
             <div class="d-flex">
-                <div class="form-group m-2">
+                <div class="form-group m-2 col">
                 
-                <label for="Calendar1">Camp Date</label>
+                    <label for="Calendar1">Camp Date</label>
                     <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender" 
-                        BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
-                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-                    <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+                        BackColor="White" BorderColor="#3366CC" BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" CellPadding="1" DayNameFormat="Shortest">
+                    <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                    <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
                     <OtherMonthDayStyle ForeColor="#999999" />
-                    <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                    <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-                    <TodayDayStyle BackColor="#CCCCCC" />
+                    <SelectedDayStyle BackColor="#009999" ForeColor="#CCFF99" Font-Bold="True" />
+                        <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                    <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                    <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                        <WeekendDayStyle BackColor="#CCCCFF" />
                 </asp:Calendar>
 
                 </div>
 
-                <div class="form-group m-2 w-100">
-                
-                    <label for="txtAddress">Camp Location</label>
-                    <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="7" CssClass="form-control mb-4" ></asp:TextBox>
-                
-                    <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtAddress" ErrorMessage="Minimum 10 & Maximum 90 Characters" ValidationExpression="^[\sA-Za-z0-9,-]{10,90}$"></asp:RegularExpressionValidator>
-                    <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic"  ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtAddress" ErrorMessage="Please enter your valid residential address."></asp:RequiredFieldValidator>
-                
+                <div class="form-group m-2  col">
+                    
+                    <label for="Calendar1">Camp Time</label>
+                    <br />
+                    <div class="d-flex">
+                        <asp:DropDownList ID="hour" runat="server" CssClass="form-control mb-4">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                            <asp:ListItem>6</asp:ListItem>
+                            <asp:ListItem>7</asp:ListItem>
+                            <asp:ListItem>8</asp:ListItem>
+                            <asp:ListItem>9</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                            <asp:ListItem>11</asp:ListItem>
+                            <asp:ListItem>12</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="meridiem" runat="server" CssClass="form-control mb-4">
+                            <asp:ListItem>PM</asp:ListItem>
+                            <asp:ListItem>AM</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <label> To </label>
+                    <div class="d-flex">
+                        <asp:DropDownList ID="hourTo" runat="server" CssClass="form-control mb-4">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                            <asp:ListItem>6</asp:ListItem>
+                            <asp:ListItem>7</asp:ListItem>
+                            <asp:ListItem>8</asp:ListItem>
+                            <asp:ListItem>9</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                            <asp:ListItem>11</asp:ListItem>
+                            <asp:ListItem>12</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="meridiemTo" runat="server" CssClass="form-control mb-4">
+                            <asp:ListItem>PM</asp:ListItem>
+                            <asp:ListItem>AM</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="form-group m-2">
-                    
-                    <label for="Calendar1">Camp Time</label>
-                        <div class="d-flex">
-                            <asp:DropDownList ID="hour" runat="server" CssClass="form-control mb-4">
-                                <asp:ListItem>1</asp:ListItem>
-                                <asp:ListItem>2</asp:ListItem>
-                                <asp:ListItem>3</asp:ListItem>
-                                <asp:ListItem>4</asp:ListItem>
-                                <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem>6</asp:ListItem>
-                                <asp:ListItem>7</asp:ListItem>
-                                <asp:ListItem>8</asp:ListItem>
-                                <asp:ListItem>9</asp:ListItem>
-                                <asp:ListItem>10</asp:ListItem>
-                                <asp:ListItem>11</asp:ListItem>
-                                <asp:ListItem>12</asp:ListItem>
-                            </asp:DropDownList>
-                            <asp:DropDownList ID="meridiem" runat="server" CssClass="form-control mb-4">
-                                <asp:ListItem>PM</asp:ListItem>
-                                <asp:ListItem>AM</asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
+            <br />
 
-                </div>
+            
+            <div class="form-group m-2 w-100">
+                
+                <label for="txtAddress">Camp Location</label>
+                <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="7" CssClass="form-control mb-4" ></asp:TextBox>
+                
+                <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtAddress" ErrorMessage="Minimum 10 & Maximum 90 Characters" ValidationExpression="^[\sA-Za-z0-9,-]{10,90}$"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic"  ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtAddress" ErrorMessage="Please enter your valid residential address."></asp:RequiredFieldValidator>
+                
+            </div>
             
             <div class="text-center">
                 <asp:Label id="fails" CssClass="text-danger" runat="server"></asp:Label>
