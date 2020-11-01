@@ -8,4 +8,4 @@
 <li id="liAccount" runat="server" class="nav-item m-auto"><a class="nav-link" runat="server" href="~/Account">Account</a></li>
 
 <!-- Logout -->
-<li class="nav-item"><asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-dark nav-link" OnClick="btnLogout_Click" /></li>
+<li class="nav-item"><asp:Button ID="btnLogout" ValidationGroup="logout" runat="server" Text="Logout" CssClass="btn btn-dark nav-link" OnClick="btnLogout_Click" /></li>
