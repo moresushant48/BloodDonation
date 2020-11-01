@@ -10,7 +10,8 @@
             <div class="form-group m-2">
                     
                 <label for="txtEmail">Email Id</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email"
+                    ValidationGroup="loginGroup"></asp:TextBox>
                 
                 <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic"  ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter Valid Email."></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="EmailIdValidator" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Valid Email ID" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
@@ -20,7 +21,8 @@
             <div class="form-group m-2">
 
                 <label for="txtPassword">Password</label>
-                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"
+                    ValidationGroup="loginGroup"></asp:TextBox>
                 
                 <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtPassword" ErrorMessage="Minimum 6 - Maximum 15 Alphanumeric." ValidationExpression="^[A-Za-z0-9]{6,15}$"></asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please Enter Password"></asp:RequiredFieldValidator>
@@ -42,7 +44,9 @@
 
             <div class="text-right">
                 
-                <asp:Button ID="btnSignup" runat="server" Text="Submit"  CssClass="btn btn-primary m-2" OnClick="btnSignin_Click"/><br />
+                <asp:Button ID="btnSignup" runat="server" Text="Submit" 
+                    ValidationGroup="loginGroup"
+                    CssClass="btn btn-primary m-2" OnClick="btnSignin_Click"/><br />
             
             </div>
 
