@@ -94,5 +94,44 @@ namespace BloodDonation
             }
 
         }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            using(SqlConnection con = new SqlConnection(_Default.conString)) {
+
+                con.Open();
+
+                String query = "SELECT password FROM users where id = " + Session["userId"];
+                SqlCommand cmd = new SqlCommand(query,con);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    if (txtPrevPassword.Text.Trim().Equals(reader.GetString(0)))
+                    {
+                        cmd.CommandText = "UPDATE users " +
+                            "SET password = '" + txtChangedPassword.Text.Trim() + "' " +
+                            "WHERE id = " + Session["userId"];
+
+                        reader.Close();
+
+                        if (cmd.ExecuteNonQuery() > 0)
+                        {
+                            Response.Write("<script>alert('Password changed succefully.')</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Failed to Change Password.')</script>");
+                        }
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Wrong Current Password.')</script>");
+                    }
+                }
+
+
+            }
+        }
     }
 }

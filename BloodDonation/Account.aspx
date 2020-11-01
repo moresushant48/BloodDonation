@@ -15,7 +15,12 @@
                <div class="card">
                    <div class="card-header bg-white d-flex">
                        <p class="h2-responsive mr-auto">My Account</p>
-                       <asp:Button ID="btnDeleteAcc" runat="server" Text="Delete Account" CssClass="btn btn-block btn-danger ml-auto" OnClick="btnDeleteAcc_Click"/>
+                       <div class="ml-auto">
+                           <asp:Button ID="btnOpenPasswordDialog" runat="server" Text="Change Password" CssClass="btn btn-block btn-secondary"
+                               data-toggle="modal" data-target="#centralModalSm"/>
+                           <asp:Button ID="btnDeleteAcc" runat="server" Text="Delete Account" CssClass="btn btn-block btn-danger" OnClick="btnDeleteAcc_Click"/>
+                       </div>
+                       
                    </div>
 
                    <div class="card-body">
@@ -104,6 +109,74 @@
            </div>
 
        </div>
+
+        <!-- MODAL -->
+
+        <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+
+            <!-- Change class .modal-sm to change the size of the modal -->
+            <div class="modal-dialog modal-sm" role="document">
+
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100" id="myModalLabel">Reset Password</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                
+                    <div class="modal-body">
+                
+                        <div class="form-group">
+
+                            <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Always">
+                                <ContentTemplate>
+
+                                    <div class="form-group m-2">
+                    
+                                        <label for="txtPrevPassword">Current Password</label>
+                                        <asp:TextBox ID="txtPrevPassword" runat="server" CssClass="form-control" TextMode="Password"
+                                            AutoPostBack="false"
+                                            ValidationGroup="checkCodeAndPass"
+                                            ></asp:TextBox>
+                
+                                        <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic"  ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPrevPassword" ErrorMessage="Please Enter Password"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtPrevPassword" ErrorMessage="Minimum 6 - Maximum 15 Alphanumeric." ValidationExpression="^[A-Za-z0-9]{6,15}$"></asp:RegularExpressionValidator>
+                
+                                    </div>
+
+                                    <div class="form-group m-2">
+
+                                        <label for="txtChangedPassword">New Password</label>
+                                        <asp:TextBox ID="txtChangedPassword" runat="server" CssClass="form-control" TextMode="Password"
+                                            AutoPostBack="false"
+                                            ValidationGroup="checkCodeAndPass"></asp:TextBox>
+                
+                                        <asp:RegularExpressionValidator ForeColor="Red" Display="Dynamic" ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtChangedPassword" ErrorMessage="Minimum 6 - Maximum 15 Alphanumeric." ValidationExpression="^[A-Za-z0-9]{6,15}$"></asp:RegularExpressionValidator>
+                                        <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtChangedPassword" ErrorMessage="Please Enter Password"></asp:RequiredFieldValidator>
+                
+                                    </div>
+
+                                </ContentTemplate>
+                               
+                            </asp:UpdatePanel>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <asp:Button ID="btnChangePassword" runat="server" CssClass="btn btn-primary" Text="Submit" OnClick="btnChangePassword_Click"
+                            ValidationGroup="checkCodeAndPass" />
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
