@@ -65,5 +65,34 @@ namespace BloodDonation
             SqlCommand cmd = new SqlCommand("UPDATE users SET address = '" + txtAddress.Text.Trim() + "' WHERE id=" + Session["userId"].ToString(), con);
             cmd.ExecuteNonQuery();
         }
+
+        protected void btnDeleteAcc_Click(object sender, EventArgs e)
+        {
+
+            String delFromUsers = "DELETE FROM users WHERE id = " + Session["userId"];
+            String delFromBanks = "DELETE FROM bloodbanks WHERE user_id = " + Session["userId"];
+
+            //DELETE USER
+            using (SqlConnection con = new SqlConnection(_Default.conString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(delFromUsers, con);
+                int deletedUser = cmd.ExecuteNonQuery();
+
+                cmd.CommandText = delFromBanks;
+                cmd.ExecuteNonQuery();
+
+                if(deletedUser > 0)
+                {
+                    Session["loggedIn"] = null;
+                    Response.Redirect("/");
+
+                    Session.Abandon();
+                }
+                cmd.Dispose();
+                con.Close();
+            }
+
+        }
     }
 }

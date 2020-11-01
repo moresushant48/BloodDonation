@@ -13,8 +13,9 @@
            <div class="container my-5">
                
                <div class="card">
-                   <div class="card-header bg-white">
-                        <p class="h3-responsive m-auto">My Account</p>
+                   <div class="card-header bg-white d-flex">
+                       <p class="h2-responsive mr-auto">My Account</p>
+                       <asp:Button ID="btnDeleteAcc" runat="server" Text="Delete Account" CssClass="btn btn-block btn-danger ml-auto" OnClick="btnDeleteAcc_Click"/>
                    </div>
 
                    <div class="card-body">
