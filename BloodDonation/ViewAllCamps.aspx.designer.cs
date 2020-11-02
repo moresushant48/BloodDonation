@@ -10,25 +10,16 @@
 namespace BloodDonation {
     
     
-    public partial class _Default {
+    public partial class ViewAllCamps {
         
         /// <summary>
-        /// up1 control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel up1;
-        
-        /// <summary>
-        /// lvCamps control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvCamps;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
         /// DataPager1 control.
@@ -47,14 +38,5 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// footer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BloodDonation.views.footer footer;
     }
 }

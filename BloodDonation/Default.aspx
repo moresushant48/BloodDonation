@@ -82,6 +82,9 @@
                             </div>
                         </ItemTemplate>
 
+                            
+
+
                         <EmptyDataTemplate>
                             
                                 <p class="m-auto h3-responsive p-4 alert-danger">No upcoming blood donation camps found.<br />You can always come back.</p>
@@ -89,7 +92,20 @@
                         </EmptyDataTemplate>
 
                     </asp:ListView>
+
                 </div>
+                <% if (lvCamps.Items.Count > 0)
+                    { %>
+                    <div>
+                        <a href="ViewAllCamps.aspx" class="btn btn-secondary">View More</a>
+                    </div>
+                <% } %>
+
+                <asp:DataPager ID="DataPager1" PagedControlID="lvCamps" PageSize="3" runat="server">
+                    
+                </asp:DataPager>
+
+                
 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
                     <SelectParameters>
