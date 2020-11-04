@@ -5,6 +5,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    
     <!-- MAIN PAGE -->
 
         <div class="d-flex" style="height:600px; background-color:#eaeaea">
@@ -82,9 +83,6 @@
                             </div>
                         </ItemTemplate>
 
-                            
-
-
                         <EmptyDataTemplate>
                             
                                 <p class="m-auto h3-responsive p-4 alert-danger">No upcoming blood donation camps found.<br />You can always come back.</p>
@@ -119,6 +117,76 @@
         </ContentTemplate>
     </asp:UpdatePanel>
 
+    <!-- Blood Donation Requests -->
+
+    <div class="container-fluid text-center p-4">
+        
+            <hr />
+            <br />
+
+            <p class="h1-responsive">Blood Donation Requests</p>
+
+            <div>
+                <div class="d-lg-flex">
+
+                    <asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource3">
+                
+                        <ItemTemplate>
+                            <div class="col-lg-4">
+                                <div class="card my-3 text-center">
+                
+                                    <div class="card-header d-flex text-center">
+                                        <div class="col-4 m-auto">
+                                            <i class="fa fa-phone text-success"></i>
+                                            <br />
+                                            <%# Eval("phone") %>
+                        
+                                        </div>
+                    
+                                        <div class="col-4 m-auto">
+                                            <i class="fa fa-tint text-primary"></i>
+                                            <br />
+                                            <%#Eval("blood") %>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-body">
+                                        <i class="fa fa-user-alt text-danger"></i>
+                                        <br />
+                                        <%# String.Format("{0} {1} {2}",Eval("fname"), Eval("mname"), Eval("lname")) %>
+                                    </div>
+
+                                    <% if (Session["loggedIn"] != null)
+                                        { %>
+                                    <asp:Button ID="btnAttend" runat="server" CommandArgument='<%#Eval("id")%>' CommandName="attend" Text="Attend" CssClass="btn btn-cyan btn-block" OnClick="btnAttend_Click" Width="100%"  />
+                                    <% } %>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+
+                        <EmptyDataTemplate>
+                            
+                                <p class="m-auto h3-responsive p-4 alert-danger">No Requests yet.</p>
+                            
+                        </EmptyDataTemplate>
+
+                    </asp:ListView>
+
+                </div>
+
+                <asp:DataPager ID="DataPager3" PagedControlID="lvCamps" PageSize="3" runat="server">
+                    
+                </asp:DataPager>
+
+                
+
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [bloodreq]" ></asp:SqlDataSource>
+
+            </div>
+            <br />
+        </div>
+
     <!-- Second PAGE -->
 
         <div class="text-center" style="
@@ -149,7 +217,7 @@
                 </div>
             </div>
         </div>
-    
+
     <uc1:footer runat="server" id="footer" />
 
 </asp:Content>

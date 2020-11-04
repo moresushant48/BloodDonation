@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="Account.aspx" />
     <Content Include="admin\BanksApproval.aspx" />
+    <Content Include="admin\BloodRequests.aspx" />
     <Content Include="admin\Users.aspx" />
     <Content Include="admin\ViewAllCamps.aspx" />
     <Content Include="banks\AddDonationCamp.aspx" />
@@ -130,6 +131,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\hands.jpg" />
     <Content Include="images\homepage.gif" />
+    <Content Include="RequestBlood.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -183,6 +185,13 @@
     </Compile>
     <Compile Include="admin\BanksApproval.aspx.designer.cs">
       <DependentUpon>BanksApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\BloodRequests.aspx.cs">
+      <DependentUpon>BloodRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\BloodRequests.aspx.designer.cs">
+      <DependentUpon>BloodRequests.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
@@ -260,6 +269,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestBlood.aspx.cs">
+      <DependentUpon>RequestBlood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestBlood.aspx.designer.cs">
+      <DependentUpon>RequestBlood.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sidebar.master.cs">
       <DependentUpon>Sidebar.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

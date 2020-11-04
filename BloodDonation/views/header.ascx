@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="BloodDonation.views.header" %>
 
+<li id="liSubmitRequest" runat="server" class="nav-item m-auto text-red"><a class="btn btn-danger nav-link" runat="server" href="~/RequestBlood">Blood Request</a></li>
+
 <li id="liHome" runat="server" class="nav-item m-auto"><a class="nav-link" runat="server" href="~/">Home</a></li>
 <li id="liSignup" runat="server" class="nav-item m-auto"><a class="nav-link" runat="server" href="~/SignUp">Sign Up</a></li>
 <li id="liSignin" runat="server" class="nav-item m-auto"><a class="nav-link" runat="server" href="~/SignIn">Login</a></li>

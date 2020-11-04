@@ -13,6 +13,15 @@ namespace BloodDonation.views {
     public partial class header {
         
         /// <summary>
+        /// liSubmitRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liSubmitRequest;
+        
+        /// <summary>
         /// liHome control.
         /// </summary>
         /// <remarks>
