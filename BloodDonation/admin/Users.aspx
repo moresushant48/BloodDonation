@@ -63,7 +63,7 @@
                         <asp:NumericPagerField CurrentPageLabelCssClass="border border-primary p-2 mx-2"/>
                     </Fields>
                 </asp:DataPager>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT [id], [fname], [mname], [lname], [email], [mobno], [bgroup], [address], r.role_name FROM [users] u INNER JOIN roles r ON u.role_id = r.role_id WHERE r.role_name = 'DONOR' ORDER BY [id] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT u.id, [fname], [mname], [lname], [email], [mobno], [bgroup], [address], r.role_name FROM [users] u INNER JOIN roles r ON u.role_id = r.id WHERE r.role_name = 'DONOR' ORDER BY [id] DESC"></asp:SqlDataSource>
             
             </div>
         </div>
@@ -115,7 +115,7 @@
                         <asp:NumericPagerField CurrentPageLabelCssClass="border border-primary p-2 mx-2"/>
                     </Fields>
                 </asp:DataPager>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT [id], [fname], [mname], [lname], [email], [mobno], [bgroup], [address], r.role_name FROM [users] u INNER JOIN roles r ON u.role_id = r.role_id WHERE r.role_name = 'BANK' ORDER BY [id] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT u.id, [fname], [mname], [lname], [email], [mobno], [bgroup], [address], r.role_name FROM [users] u INNER JOIN roles r ON u.role_id = r.id WHERE r.role_name = 'BANK' ORDER BY [id] DESC"></asp:SqlDataSource>
             
             </div>
       </div>
