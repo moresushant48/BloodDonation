@@ -156,11 +156,7 @@
                                         <br />
                                         <%# String.Format("{0} {1} {2}",Eval("fname"), Eval("mname"), Eval("lname")) %>
                                     </div>
-
-                                    <% if (Session["loggedIn"] != null)
-                                        { %>
-                                    <asp:Button ID="btnAttend" runat="server" CommandArgument='<%#Eval("id")%>' CommandName="attend" Text="Attend" CssClass="btn btn-cyan btn-block" OnClick="btnAttend_Click" Width="100%"  />
-                                    <% } %>
+                                    
                                 </div>
                             </div>
                         </ItemTemplate>
@@ -175,13 +171,20 @@
 
                 </div>
 
+                <% if (ListView2.Items.Count > 0)
+                    { %>
+                    <div>
+                        <a href="ViewAllBloodRequests.aspx" class="btn btn-secondary">View More</a>
+                    </div>
+                <% } %>
+
                 <asp:DataPager ID="DataPager3" PagedControlID="lvCamps" PageSize="3" runat="server">
                     
                 </asp:DataPager>
 
                 
 
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [bloodreq]" ></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [bloodreq] WHERE status = 'APPROVED'" ></asp:SqlDataSource>
 
             </div>
             <br />

@@ -23,7 +23,7 @@
                         <div class="col-1">
                             <% if (Session["loggedIn"] != null)
                                         { %>
-                            <asp:Button runat="server" ID="DeleteCamp" Text="Attend" CommandArgument='<%#Eval("id")%>' CommandName="attend" OnClick="btnAttend_Click" CssClass="btn btn-red btn-block p-1" />
+                            <asp:Button runat="server" ID="DeleteCamp" Text="Attend" CommandArgument='<%#Eval("id")%>' CommandName="attend" OnClick="btnAttend_Click" CssClass="btn btn-primary btn-block p-1" />
                             <% } %>
                         </div> 
      
