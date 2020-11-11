@@ -225,7 +225,7 @@
                         <tbody>
                             <tr>
                                 <td><%#Eval("id") %></td>
-                                <td><%# String.Format("{0} {1} {2}",Eval("first_name"), Eval("middle_name"), Eval("last_name")) %></td>
+                                <td><%# String.Format("{0} {1} {2}",Eval("fname"), Eval("mname"), Eval("lname")) %></td>
                                 <td><%#Eval("age") %></td>
                                 <td><%#Eval("gender") %></td>
                                 <td><%#Eval("phone") %></td>
