@@ -43,7 +43,8 @@ namespace BloodDonation.banks
                     "'" + txtAddress.Text.Trim() + "'," +
                     "'" + txtMobNo.Text.Trim() + "'," +
                     "'" + txtBloodGroup.Text.Trim() + "'," +
-                    Request["campId"] + ")";
+                    Request["campId"] + "," +
+                    txtBloodQuantity.Text.Trim() + ")";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {

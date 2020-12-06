@@ -22,10 +22,11 @@
                     
                     <div class="m-auto">
 
-                        <h1 class="text-monospace display-2 text-left">Save <span class="text-success animated heartBeat infinite"><i class="fa fa-heartbeat"></i></span>, Donate <span class="text-danger"><i class="fa fa-tint"></i></span>.</h1>
+                        <h1 class="text-monospace display-2 text-left">Save <span class="text-success animated heartBeat infinite"><i class="fa fa-heartbeat"></i></span>,<br />
+                            Donate <span class="text-danger"><i class="fa fa-tint"></i></span>.</h1>
                         <hr />
                         <p class="lead h2-responsive text-black-50">Be a <b>Blood Donor</b>, Be a <b>Hero</b> - A <b>Real One</b>.</p>
-                        
+                        <p id="txtdate" runat="server"></p>
                         <button class="btn border border-danger text-danger bg-white">Learn More</button>
                     
                     </div>
@@ -105,7 +106,8 @@
 
                 
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bloodConnectionString %>" 
+                    SelectCommand="SELECT * FROM [camps] WHERE camp_date > @todays_date">
                     <SelectParameters>
                         <asp:Parameter Name="todays_date" Type="String" />
                     </SelectParameters>

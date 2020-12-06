@@ -7,11 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BloodDonation {
-    
-    
-    public partial class _Default {
-        
+namespace BloodDonation
+{
+
+
+    public partial class _Default
+    {
+
+        /// <summary>
+        /// txtdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtdate;
+
         /// <summary>
         /// up1 control.
         /// </summary>
@@ -20,7 +31,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel up1;
-        
+
         /// <summary>
         /// lvCamps control.
         /// </summary>
@@ -29,7 +40,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lvCamps;
-        
+
         /// <summary>
         /// DataPager1 control.
         /// </summary>
@@ -38,7 +49,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataPager DataPager1;
-        
+
         /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
@@ -47,7 +58,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
+
         /// <summary>
         /// ListView2 control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView ListView2;
-        
+
         /// <summary>
         /// DataPager3 control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataPager DataPager3;
-        
+
         /// <summary>
         /// SqlDataSource3 control.
         /// </summary>
@@ -74,7 +85,7 @@ namespace BloodDonation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
-        
+
         /// <summary>
         /// footer control.
         /// </summary>

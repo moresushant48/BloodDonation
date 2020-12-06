@@ -220,7 +220,7 @@ GO
 USE [blood]
 GO
 
-/****** Object:  Table [dbo].[visitdetails]    Script Date: 11-11-2020 18:58:58 ******/
+/****** Object:  Table [dbo].[visitdetails]    Script Date: 06-12-2020 19:17:38 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -237,7 +237,9 @@ CREATE TABLE [dbo].[visitdetails](
 	[address] [varchar](100) NOT NULL,
 	[phone] [varchar](10) NOT NULL,
 	[blood] [varchar](4) NOT NULL,
-	[camp_id] [int] NOT NULL
+	[camp_id] [int] NOT NULL,
+	[quantity] [int] NULL
 ) ON [PRIMARY]
 GO
+
 

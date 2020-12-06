@@ -15,7 +15,17 @@ namespace BloodDonation
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlDataSource1.SelectParameters["todays_date"].DefaultValue = DateTime.Today.ToShortDateString();
+            String date = DateTime.Today.ToShortDateString();
+            if (date.StartsWith("0"))
+                date = date.Remove(0,1);
+
+            SqlDataSource1.SelectParameters["todays_date"].DefaultValue = date;
+        }
+
+        public static string checkIsOld(object obj)
+        {
+            int res = DateTime.Parse(obj.ToString()).CompareTo(DateTime.Now);
+            return res > 0 ? "border-left border-success" : "border-left border-danger";
         }
 
         public String convertToIndianDate(object obj) {

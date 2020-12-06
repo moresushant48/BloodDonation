@@ -58,11 +58,9 @@ namespace BloodDonation.views
 
                 btnLogout.Visible = false;
                 liAccount.Visible = false;
-                //liMyAccount.Visible = false;
                 liBankboard.Visible = false;
                 liDashboard.Visible = false;
                 
-                //liUserEmail.Visible = false;
             }
         }
 
