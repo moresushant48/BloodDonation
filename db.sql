@@ -238,7 +238,7 @@ CREATE TABLE [dbo].[visitdetails](
 	[phone] [varchar](10) NOT NULL,
 	[blood] [varchar](4) NOT NULL,
 	[camp_id] [int] NOT NULL,
-	[quantity] [int] NULL
+	[quantity] [int] NOT NULL
 ) ON [PRIMARY]
 GO
 
